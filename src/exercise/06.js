@@ -26,6 +26,7 @@ function useMedia(query, initialState = false) {
       mql.removeListener(onChange)
     }
   }, [query])
+  React.useDebugValue(`\`${query}\` => ${state}`);
 
   return state
 }
